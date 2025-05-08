@@ -10,21 +10,27 @@ Nota: investigue uso de las funciones upper(), lower() y title() de Python para 
 nombre = input("Ingrese su nombre: ")
 
 # Solicitar la opción deseada
-print("Seleccione una opción:")
+print("En este programa puede realizar cualquiera de las siguientes operaciones:")
 print("1 - Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.")
 print("2 - Si quiere su nombre en minúsculas. Por ejemplo: pedro.")
 print("3 - Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.")
-opcion = input("Ingrese 1, 2 o 3 según la opción que desee: ")
+opcion = int(input("Ingrese 1, 2 o 3 según la opción que desee: "))
 
-# Aplicar la transformación según la opción elegida
-if opcion == "1":
-    print(nombre.upper())
-elif opcion == "2":
-    print(nombre.lower())
-elif opcion == "3":
-    print(nombre.title())
+# Si el usuario eligió la opción 1, imprimimos su nombre en mayúsculas
+if opcion == 1:
+    nombre_mayuscula = nombre.upper()
+    print(nombre_mayuscula)
+# Si el usuario eligió la opción 2, imprimimos su nombre en minúsculas
+elif opcion == 2:
+    nombre_minuscula = nombre.lower()
+    print(nombre_minuscula)
+# Si el usuario eligió la opción 3, imprimimos su nombre con la primera letra en mayúscula
+elif opcion == 3:
+    nombre_title = nombre.title()
+    print(nombre_title)
+# Si el usuario eligió otro número de opción, imprimimos "Por favor, ingrese únicamente 1, 2 o 3"
 else:
-    print("Opción inválida")
+    print("Por favor, ingrese únicamente 1, 2 o 3")
 
 """
 Nota:

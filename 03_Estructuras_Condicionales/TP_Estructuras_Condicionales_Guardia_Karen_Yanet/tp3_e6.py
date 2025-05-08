@@ -24,11 +24,15 @@ print("Mediana:", mediana)
 print("Moda:", moda)
 
 # Comparar y determinar el sesgo
+# Si la media es mayor que la mediana y la mediana es mayor que la moda, imprimir "Sesgo positivo o a la derecha"
 if media > mediana > moda:
-    print("Distribución con sesgo positivo (a la derecha)")
+    print("Sesgo positivo o a la derecha")
+# Si la media es menor que la mediana y la mediana es menor que la moda, imprimir "Sesgo negativo o a la izquierda"
 elif media < mediana < moda:
-    print("Distribución con sesgo negativo (a la izquierda)")
+    print("Sesgo negativo o a la izquierda")
+# Si la media, la mediana y la moda son iguales, imprimir "Sin sesgo"
 elif media == mediana == moda:
-    print("Distribución sin sesgo")
+    print("Sin sesgo")
+# Si no se cumple ninguna de las condiciones anteriores, imprimir "No se puede determinar si esta distribución tiene sesgo o no"
 else:
-    print("La distribución no cumple con un patrón de sesgo claro")
+    print("No se puede determinar si esta distribución tiene sesgo o no")
