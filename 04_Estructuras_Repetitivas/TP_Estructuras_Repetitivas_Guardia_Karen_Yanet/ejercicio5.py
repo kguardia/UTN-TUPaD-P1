@@ -7,15 +7,26 @@ import random
 
 numero_secreto = random.randint(0,9)
 
-intentos = 0
-adivinanza = -1 #Inicializamos con un número distinto del secreto
+print("¡Bienvenido al juego de adivinar el número!")
+print("Estoy pensando en un número entre 0 y 9. ¿Puedes adivinar cuál es?")
 
-# Bucle hasta que el usuario adivine el número
-while adivinanza != numero_secreto:
-    adivinanza = int(input("Adivina el número (entre 0 y 9): "))
-    intentos += 1
-    print("Número incorrecto, elige otro número")
+intentos = 0  # Variable para contar los intentos del usuario
+acertado = False  # Bandera que indica si el usuario ya adivinó el número
 
-# Mostrar mensaje final
-print(f"¡Correcto! El numero era: {numero_secreto}.")
-print(f"Lo adivinaste en {intentos} intento(s).")
+# Ciclo que se ejecuta hasta que el usuario adivine
+while not acertado:
+    # Pedir al usuario que ingrese un número
+    intento = int(input("Ingresa tu intento: "))
+    intentos += 1  # Incrementar el contador de intentos
+
+    # Comparar el número ingresado con el número secreto
+    if intento == numero_secreto:
+        print("¡Felicidades! Adivinaste el número.")
+        acertado = True  # Cambiar la bandera a True para salir del bucle
+    elif intento < numero_secreto:
+        print("El número es mayor. ¡Inténtalo de nuevo!")  # Dar una pista
+    else:
+        print("El número es menor. ¡Inténtalo de nuevo!")  # Dar otra pista
+
+# Mostrar cuántos intentos fueron necesarios
+print(f"Lo lograste en {intentos} intentos. ¡Buen trabajo!")

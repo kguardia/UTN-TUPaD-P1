@@ -1,16 +1,23 @@
 """
 Escribe un programa que invierta el orden de los dígitos de un número ingresado por el usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745.
 """
-# Solicita al usuario un número entero
-numero = input("Ingresa un número entero: ")
+# Programa para invertir el orden de los dígitos de un número ingresado por el usuario usando bucles
+numero = int(input("Ingrese un número entero: "))
 
-# Verifica si el número es negativo
-if numero[0] == '-':
-    # Si es negativo, invertimos solo los dígitos (sin el signo)
-    numero_invertido = '-' + numero[:0:-1]
-else:
-    # Si no es negativo, simplemente invertimos el número
-    numero_invertido = numero[::-1]
-    
-# Muestra el número invertido
+# Convertir el número a positivo para manejar números negativos
+numero_absoluto = abs(numero)
+
+# Inicializar la variable para almacenar el número invertido
+numero_invertido = 0
+
+while numero_absoluto > 0:
+    digito = numero_absoluto % 10  # Obtener el último dígito
+    numero_invertido = numero_invertido * 10 + digito  # Agregar el dígito al número invertido
+    numero_absoluto //= 10  # Eliminar el último dígito del número
+
+# Si el número original era negativo, hacer que el número invertido también sea negativo
+if numero < 0:
+    numero_invertido = -numero_invertido
+
+# Mostrar el número invertido
 print(f"El número invertido es: {numero_invertido}")

@@ -1,14 +1,20 @@
 """
 Desarrolla un programa que solicite al usuario un número entero y determine la cantidad de dígitos que contiene.
 """
-# Solicitar al usuario un número entero:
-numero = int(input("Ingrese un número entero: "))
+# Programa para contar la cantidad de dígitos en un número entero
+numero = int(input("Ingresa un número entero: "))  # Solicitar número al usuario y transformar a entero.
+cantidad_digitos = len(str(abs(numero)))  # Convertir a positivo, luego a string, y contar caracteres
+print(f"El número {numero} tiene {cantidad_digitos} dígitos.")
+# Alternativa usando bucles
+contador = 0
+numero_absoluto = abs(numero)  # Asegurarse de trabajar con el valor absoluto del número
 
-# Convierte el número a positivo en caso de que sea negativo
-numero_abs = abs(numero)
+while numero_absoluto > 0:
+    numero_absoluto //= 10  # Dividir entre 10 para eliminar el último dígito
+    contador += 1  # Incrementar el contador
 
-# Convierte el número a cadena y cuenta la cantidad de caracteres
-cantidad_digitos = len(str(numero_abs))
+# Si el número es 0, tiene 1 dígito
+if numero == 0:
+    contador = 1
 
-# Muestra el resultado
-print(f"El número tiene {cantidad_digitos} dígito(s).")
+print(f"(Usando bucles) El número {numero} tiene {contador} dígitos.")
