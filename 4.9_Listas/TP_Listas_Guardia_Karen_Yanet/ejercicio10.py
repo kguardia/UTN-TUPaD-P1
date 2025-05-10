@@ -8,12 +8,8 @@ Elaborar una lista anidada llamada “lista_anidada” que contenga los siguient
 ● Posición lista_anidada[3]: False
 Imprimir la lista resultante por pantalla.
 """
-def calcular_promedio(a,b,c):
-    promedio=(a+b+c)/3
-    print(promedio)
+# Siguiendo las instrucciones del enunciado tenemos
+lista_anidada = [15, True, [25.5,57.9,30.6], False]
 
-a=int(input("Ingrese el primero numero: "))
-b=int(input("Ingrese el segundo numero: "))
-c=int(input("Ingrese el tercer numero: "))
-
-calcular_promedio(a,b,c)
+# Imprimimos la lista resultante por pantalla
+print(lista_anidada)

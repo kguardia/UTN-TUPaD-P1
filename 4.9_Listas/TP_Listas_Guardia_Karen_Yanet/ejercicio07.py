@@ -2,19 +2,22 @@
 Reemplazar los dos valores centrales (índices 1 y 2) de la lista “autos” por dos nuevos valores cualesquiera.
 autos = ["sedan", "polo", "suran", "gol"]
 """
+# Creamos la lista "autos"
+autos = ["sedan", "polo", "suran", "gol"]
 
-def operaciones_basicas(a, b):
-    suma= a+b
-    resta= a-b
-    div= a/b
-    multi= a*b
-    print(f"La suma de los numeros ingresados es: {suma}")
-    print(f"La resta de los numeros ingresados es: {resta}")
-    print(f"La division de los numeros ingresados es: {div}")
-    print(f"La multiplicacion de los numeros ingresados es: {multi}")
+# Reemplazamos el índice 1
+autos[1] = "etios"
 
+# Reemplazamos el índice 2
+autos[2] = "hilux"
 
+# Imprimimos la lista resultante
+print(autos)
 
-a=int(input("Ingrese el primer numero: "))
-b=int(input("Ingrese el segundo numero: "))
-operaciones_basicas(a,b)
+# Otra forma: como los índices son consecutivos, podemos reemplazar ambos a la vez
+autos = ["sedan", "polo", "suran", "gol"]
+
+# Reemplazamos los índices 1 y 2 a la vez
+autos[1:3] = ["etios", "hilux"]
+
+print(autos)

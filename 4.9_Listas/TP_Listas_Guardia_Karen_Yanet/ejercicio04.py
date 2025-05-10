@@ -3,14 +3,23 @@ Reemplazar el segundo y último valor de la lista “animales” con las palabra
 animales = ["perro", "gato", "conejo", "pez"]
 """
 
-import math
-def calcular_area_circulo(radio):
-    area=math.pi*radio**2.0
-    return area
-def calcular_perimetro_circulo(radio):
-    perimetro=2*math.pi*radio
-    return perimetro
+# Creamos la lista "animales"
+animales = ["perro", "gato", "conejo", "pez"]
 
-r=int(input("Ingrese el radio: "))
-print(calcular_area_circulo(r))
-print(calcular_perimetro_circulo(r))
+# Reemplazamos el segundo valor (índice = 1) por "loro"
+animales[1] = "loro"
+
+# Reemplazamos el último valor (índice = 3) por "loro"
+animales[3] = "oso"
+
+# Imprimimos la lista resultante
+print(animales)
+
+# Otra manera es utilizar indexing con números negativos
+animales = ["perro", "gato", "conejo", "pez"]
+
+animales[1] = "loro"
+# Reemplazamos el último valor (índice = -1) por "loro"
+animales[-1] = "oso"
+
+print(animales)

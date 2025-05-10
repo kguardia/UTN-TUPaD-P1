@@ -5,10 +5,8 @@ numeros.remove(max(numeros))
 print(numeros)
 """
 
-def segundos_a_horas(segundos):
-    horas=0
-    horas=segundos/3600
-    print(f"La cantidad de horas son: {horas}")
+# Creamos un rango del 10 al 30, haciendo saltos de 5 en 5
+numeros = list(range(10, 31, 5))
 
-segundos= int(input("Ingrese la cantidad de segundos: "))
-segundos_a_horas(segundos)
+# Imprimimos por pantalla los dos primeros números
+print(numeros[0:2])
